@@ -12,10 +12,18 @@ export async function getActivities() {
   }
 }
 
-/**
- * Sends a new activity to the API to be created.
- * A valid token is required.
- */
+// This below will get the activity ID for the the indivial work out. 
+export async function getActivity(id){
+  try{
+    const response = await fetch(API + "/activities/" + id);
+    const result = await response.json();
+    return result;
+  }catch(e){
+    console.error(e)
+    return[];
+  }
+}
+
 export async function createActivity(token, activity) {
   if (!token) {
     throw Error("You must be signed in to create an activity.");
