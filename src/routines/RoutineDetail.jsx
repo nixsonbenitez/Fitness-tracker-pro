@@ -52,11 +52,11 @@ export default function RoutineDetail(){
             <p>Created by: {routine.creatorName}</p>
             {error && <p role="alert">{error}</p>}
             </div>
-            {token && <button onClick={tryDelete} className="delete-btn"> Delete Routine</button>}
+           
         <h2>Sets</h2>
         {routine.sets.length === 0 ? (
             <p>No sets yet! Add one below.</p>):(
-                <ul>
+                <ul >
                     {routine.sets.map((set) => (
                         <li key={set.id} className="set-item">
                            <span className="set-pill"> {set.activityName} - {set.count} reps </span>
@@ -73,7 +73,7 @@ export default function RoutineDetail(){
 }
 
 {token && (
-        <form action ={tryAddSet} className="routine-form">
+        <form action ={tryAddSet} className="routine-form" id="add-set-form">
         <label>Activity
             <select name ="activityId">
                 {activities.map((activity) => (
@@ -87,9 +87,11 @@ export default function RoutineDetail(){
         Count
         <input type="number" name="count" required/>
         </label>
-        <button>Add Set</button>
+        
         </form>
     )}
+    <button form="add-set-form" className="form-btn">Add Set</button>
+    {token && <button onClick={tryDelete} className="delete-btn"> Delete Routine</button>}
 </div>  
 )
 

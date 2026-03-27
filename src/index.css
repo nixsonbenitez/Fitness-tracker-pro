@@ -117,6 +117,7 @@ for the user to choose*/
   background-color: #f0f0f0;
   padding: 1rem;
   border-radius: 12px;
+  border: 2.5px solid #469a9a;
   margin-top:20px;
 }
 
@@ -218,6 +219,7 @@ for the user to choose*/
   border-radius: 999px;
   padding: 0.4rem .8rem;
   cursor: pointer;
+  margin-top:10px;
 }
 
 .delete-btn:hover{
@@ -227,8 +229,13 @@ for the user to choose*/
 .set-item{
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap:1.5rem;
   margin-bottom: 0.5rem;
+  background-color: #94c9c9 ;
+  padding: .6rem;
+  border-radius: 999px;
+  border: 3px solid #005f5f;
 }
 
 .set-pill{
@@ -264,4 +271,25 @@ for the user to choose*/
 
 .delete-btn-act:hover{
   background-color: rgb(71, 0, 0);
+}
+
+.set-display{
+  background-color: #94c9c9 ;
+  padding: .6rem;
+  border-radius: 999px;
+  border: 3px solid #005f5f;
+}
+
+.form-btn{
+  background-color:#005f5f;
+  border: none;
+  color: white;
+  padding: .4rem .8rem;
+  border-radius: 22px;
+  cursor: pointer;
+  margin-right: 15px;
+}
+
+.form-btn:hover{
+  background-color: #014d4d;
 }
