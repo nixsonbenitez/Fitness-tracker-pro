@@ -35,11 +35,11 @@ export default function ActivityDetail(){
     // return here is how we want to present ActivityDetail in the frontend
     console.log(activity);
     return(
-        <div> 
+        <div className="detail-activities"> 
             <h1>{activity.name}</h1>
+            <p className="creator">Created by: {activity.creatorName}</p>
             <p>{activity.description}</p>
-            <p>Created by: {activity.creatorName}</p>
-            {token && <button onClick={tryDelete}>Delete</button>}
+            {token && <button onClick={tryDelete} className="delete-btn-act">Delete</button>}
         </div>
     )
 }

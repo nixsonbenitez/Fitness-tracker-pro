@@ -12,7 +12,7 @@ main {
 }
 
 #root {
-  width: 45ch;
+  width: 60ch;
   margin: 0 auto;
   padding: 1rem;
 }
@@ -23,10 +23,45 @@ header {
   margin: 0.5rem 0;
 }
 
+
 header nav {
   display: flex;
+  background-color: #e0f5f5;
+  padding: 0.4rem 0.8rem;
   gap: 1ch;
+  border-radius: 999px;
+  min-width: 450px;
+  justify-content: center;
+  border: 3px solid #57a5a5;
 }
+/*The change at the top is the pull shape pill */
+
+header nav a {
+  background-color: teal;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  text-decoration: none;
+}
+/*This allows for the NavLinks to be pills*/
+
+header nav a:hover {
+  background-color: #005f5f;
+  text-decoration: none;
+}
+
+header nav button {
+  background-color: teal;
+  color: white;
+  padding: 0.3rem 0.8rem;
+  border-radius: 999px;
+  border: none; 
+  cursor: pointer;
+  font-size:1rem;
+}
+ header nav button:hover {
+  background-color: #005f5f;
+ }
 
 a {
   color: teal;
@@ -44,4 +79,189 @@ ol {
 
 p[role="alert"] {
   color: red;
+}
+
+/*This is extra css from me*/
+.routine-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 1rem;
+  list-style: none;
+  padding: 0;
+}
+/* This allows for the routines to appear more like a carton of eggs
+for the user to choose*/
+
+.routine-card{
+  background-color: #357a7a;
+  padding: 1.4rem;
+  border-radius: 20px;
+  text-align: center;
+}
+/*this makes the card their own unit with color*/
+
+.routine-card a {
+  text-decoration: none;
+  color: white;
+}
+
+.routine-card:hover {
+  background-color: #63a3a3;
+}
+
+
+/*Below is some css for the form being used*/
+.routine-form{
+  display: grid;
+  background-color: #f0f0f0;
+  padding: 1rem;
+  border-radius: 12px;
+  margin-top:20px;
+}
+
+.routine-form input{
+  border-radius: 999px;
+  border: 1px solid #ccc;
+  padding: 0.2rem ;
+}
+
+.routine-form button{
+  padding: 5px;
+  border-radius: 999px;
+  border: 1px solid #838383;
+  cursor: pointer;
+}
+.routine-form button:hover{
+  background-color: #e0f5f5 ;
+}
+
+
+.routine-list-activities {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-top: 1rem;
+  align-items: flex-start;
+}
+
+.routine-card-activities {
+  display: inline-block;
+  background-color: teal;
+  border-radius: 999px;
+  padding: 0.4rem 1.2rem;
+  width: auto;
+}
+
+.routine-card-activities a{
+  text-decoration: none;
+  color: white;
+}
+
+.routine-card-activities:hover{
+  background-color: #0b9898;
+}
+
+/*This below is css for the details for each activity*/
+.detail-activities{
+  background-color:#005f5f;
+  border-radius: 16px;
+  padding: 1.5rem;
+  margin-top: 1rem;
+}
+
+.detail-activities h1 {
+  display: inline-block;
+  background-color: teal;
+  color: white;
+  padding: 0.4rem 1.2rem;
+  border-radius: 20px;
+}
+
+.detail-activities .creator {
+  font-family: sans-serif;
+  background-color: #005f5f;
+  color: white
+}
+
+.detail-activities p {
+  display: flex;
+  padding: 20px;
+  border-radius: 20px;
+  background-color: #e0f5f5;
+  color: black;
+
+}
+/*This below us for routines detail*/
+
+.detail-routine{
+  background-color: #e0f5f5;
+  border-radius: 20px;
+  padding: 1.5rem;
+  margin-top: 1rem;
+  border: 3px solid rgb(65, 138, 138);
+}
+
+.detail-routine-header{
+  background-color: teal;
+  color:white;
+  border-radius: 12px;
+  padding:1rem;
+  margin-bottom: .5rem;
+}
+
+.delete-btn{
+  background-color:  darkred;
+  color: white;
+  border: none;
+  border-radius: 999px;
+  padding: 0.4rem .8rem;
+  cursor: pointer;
+}
+
+.delete-btn:hover{
+  background-color: rgb(71, 0, 0);
+}
+
+.set-item{
+  display: flex;
+  align-items: center;
+  gap:1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.set-pill{
+  display: inline-block;
+  background-color: teal;
+  color: white;
+  border-radius: 999px;
+  padding: 0.3rem 1rem
+}
+
+.delete-set-btn{
+  background-color: rgb(125, 125, 125);
+  color: white;
+  border: none;
+  border-radius: 999px;
+  padding: 0.4rem .8rem;
+  cursor: pointer;
+}
+.delete-set-btn:hover {
+  background-color: rgb(80, 80, 80);
+}
+
+/*This was a refinement edit I forgot to add styling to this button */
+.delete-btn-act{
+  background-color:  darkred;
+  color: white;
+  border: none;
+  border-radius: 999px;
+  padding: 0.4rem .8rem;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.delete-btn-act:hover{
+  background-color: rgb(71, 0, 0);
 }

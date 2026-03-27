@@ -25,7 +25,7 @@ export default function Login() {
   return (
     <>
       <h1>Log in to your account</h1>
-      <form action={tryLogin}>
+      <form action={tryLogin} className="routine-form">
         <label>
           Username
           <input type="text" name="username" required />

@@ -5,6 +5,8 @@ import Error404 from "./Error404.jsx";
 import Layout from "./layout/Layout.jsx";
 import {Routes, Route} from "react-router";
 import ActivityDetail from "./activities/ActivityDetail.jsx";
+import RoutinesPage from "./routines/RoutinesPage.jsx"
+import RoutineDetail from "./routines/RoutineDetail.jsx"
 
 /**
  * Fitness Trackr is a platform where fitness enthusiasts can share their workouts and
@@ -15,12 +17,16 @@ export default function App() {
   return( <Routes>
     <Route element = {<Layout/>}>
       <Route path="/" element={<ActivitiesPage/>} />
+      <Route path="/routines" element={<RoutinesPage/>}/>
+      <Route path="/routines/:id" element={<RoutineDetail/>}/>
       <Route path="/activities/:id" element={<ActivityDetail/>}/>
       <Route path="/login" element={<Login/>}/>
       <Route path="/register" element={<Register/>}/>
       <Route path="*" element={<Error404/>}/>
     </Route>
-    
   </Routes>
   )
 }
+
+
+//I added routinepage and routinedetail for the extra step of the assignment I am working on.

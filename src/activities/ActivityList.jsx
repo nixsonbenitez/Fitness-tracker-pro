@@ -3,7 +3,7 @@ import {Link} from "react-router"
 
 export default function ActivityList({ activities }) {
   return(
-    <ul>
+    <ul className="routine-list-activities">
       {activities.map((activity) => (
         <ActivityListItem
         key={activity.id}
@@ -14,7 +14,7 @@ export default function ActivityList({ activities }) {
 }
 function ActivityListItem({activity}) {
   return (
-    <li>
+    <li className="routine-card-activities">
       <Link to={`/activities/${activity.id}`}>{activity.name}</Link>
     </li>
   );

@@ -25,7 +25,7 @@ export default function ActivityForm({ syncActivities }) {
   return (
     <>
       <h2>Add a new activity</h2>
-      <form action={tryCreateActivity}>
+      <form action={tryCreateActivity} className="routine-form">
         <label>
           Name
           <input type="text" name="name" />
