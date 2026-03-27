@@ -99,5 +99,6 @@ export default function RoutineDetail(){
     //h2 note: displays data of the set and if the user with a token wanted to delete the the it would call the id and send that over to setRoutine to update the state.
     //FORM NOTE: The form here is for the use this allows the user to click on an activity. add a set and reps and submit it!
     
-
+    // Something cool I learned, is since the button is outside the form I can form="add-set-from"
+    //To reconnect elements back to its form! This was clutch with the vision I had.
 }
